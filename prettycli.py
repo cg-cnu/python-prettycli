@@ -19,42 +19,42 @@ colors = {
     'hidden': ''
 }
 
-def info(text):
+def info(text, label='INFO'):
     ''' green
     '''
-    return '💁 {c[greenBold]} INFO :{c[green]} {text} {c[clear]}'.format(c=colors, text=text)
+    return '\n{c[greenBold]} {label} 💁 {c[green]} {text} {c[clear]}'.format(c=colors, label=label, text=text)
 
-def warn(text):
+def warn(text, label='WARN'):
     ''' yellow
     '''
-    return '⚠️ {c[yellowBold]} WARN :{c[yellow]} {text} {c[clear]}'.format(c=colors, text=text)
+    return '\n{c[yellowBold]} {label} ⚠️ {c[yellow]} {text} {c[clear]}'.format(c=colors, label=label, text=text)
 
-def error(text):
+def error(text, label='ERROR'):
     ''' red
     '''
-    return '🤦🏽 {c[redBold]} ERROR :{c[red]} {text} {c[clear]}'.format(c=colors, text=text)
+    return '\n{c[redBold]} {label} 🤦 {c[red]} {text} {c[clear]}'.format(c=colors, label=label, text=text)
 
-def wait(text):
+def wait(text, label='WAIT'):
     ''' blue
     '''
-    return '🙄 {c[blueBold]} WAIT :{c[blue]} {text} {c[clear]}'.format(c=colors, text=text)
+    return '\n{c[blueBold]} {label} 🙄 {c[blue]} {text} {c[clear]}'.format(c=colors, label=label, text=text)
 
-def critical(text):
+def critical(text, label='CRITICAL'):
     ''' critical
     '''
-    return '🚨 {c[megentaBold]} CRITICAL :{c[megenta]} {text} {c[clear]}'.format(c=colors, text=text)
+    return '\n{c[megentaBold]} {label} 🚨 {c[megenta]} {text} {c[clear]}'.format(c=colors, label=label, text=text)
 
 def command(text):
     ''' cyan
     '''
-    return '⚡ {c[cyanBold]}{text}{c[clear]}'.format(c=colors, text=text)
+    return '\n⚡  {c[cyanBold]}{text}{c[clear]}'.format(c=colors, text=text)
 
 def link(text):
     ''' blue
     '''
-    return '🔗 {c[blueUnderline]}{text}{c[clear]}'.format(c=colors, text=text)
+    return '\n🔗  {c[blueUnderline]}{text}{c[clear]}'.format(c=colors, text=text)
 
 def ignore(text):
     ''' grey
     '''
-    return '😴 {c[greyLight]}{text}{c[clear]}'.format(c=colors, text=text)
+    return '\n😴  {c[greyLight]}{text}{c[clear]}'.format(c=colors, text=text)
